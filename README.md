@@ -44,4 +44,19 @@ git branch -M main
 git push -u origin main
 等待推送完成，就可以在 github 中看到代码了。
 
+当需要进行大文件传输 也就是文件超过 100Mb 之后，就需要用到 lfs （large files storage）
+
+1、下载 lfs ：
+git lfs install
+
+2、跟踪大文件：
+git lfs track "*.exe"
+
+3、需要添加 .gitattributes
+git add .gitattributes
+
+3、添加和提交大文件
+git add .
+git commit -m "xxx"
+git push -u origin main
 
